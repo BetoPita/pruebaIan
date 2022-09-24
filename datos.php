@@ -1,5 +1,50 @@
 <?php
 
+
+//EJERCICIO 3
+/* Cuando entro a esta url http://localhost/pruebaian/datos.php me marca un error
+Notice: Undefined index: numero1 in /Applications/MAMP/htdocs/pruebaian/datos.php on line 13
+
+Notice: Undefined index: numero2 in /Applications/MAMP/htdocs/pruebaian/datos.php on line 14
+
+Notice: Undefined index: numero1 in /Applications/MAMP/htdocs/pruebaian/datos.php on line 19
+
+validar que si no hay nada por post regrese un mensaje de 
+
+"Este archivo no puede ser visitado mediante una url"
+
+
+//EJERCICIO 4
+
+Agregar otro input en index.html que sea Número 3
+
+si el campo #3 es diferente de vacío la suma es numero1+numero3
+
+si el campo #3 es igual a vacío la suma es numero1 + numero2
+
+imprimir la suma
+
+
+EJERCICIO 5
+
+HAZ dos archivos index-usuario.html y datos-usuario.php
+en el index-usuario.html vas a poner 3 campos 
+
+1) "escribe tu nombre"
+2) "escribe tu edad"
+3) "escribe tu teléfono"
+
+al darle enviar al botón deberá ir al archivo datos-usuario.php y deberás imprimir
+
+"Hola $nombre tu edad es:  $edad, y tu teléfono es: $telefono "
+
+
+
+
+
+*/
+
+
 //Con el print_r($_POST); muestras todo lo que te llega por post del formulario
 print_r($_POST);
 
