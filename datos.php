@@ -55,21 +55,47 @@ numero1 y numero2 es el name que le pusiste al input ej.
     <input type="number" name="numero1" placeholder="Ingresa el #1"> <br>
 */
 
-$numero1 = $_POST['numero1'];
-$numero2 = $_POST['numero2'];
-$resultado1 = $numero1+$numero2;
-#echo "mi primer numero es: ". $_POST['numero1'] .'<br>';
-#echo "mi segundo número es: $numero2";
-
-echo "mi primer numero es: ". $_POST['numero1'] .'<br>';
-echo "mi segundo número es: $numero2" .'<br>';
-echo "el resultado de la suma es: $resultado1" .'<br>';
-
-if($numero2==0) {
-    echo "El segundo numero no puede ser 0 para ejecutar la division" ;
+$numero1 = ['numero1'];
+$numero2 = ['numero2'];
+$numero3 = ['numero3'];
+if (!$_POST) {
+    print("Este archivo no puede ser visitado mediante una url");
 }else{
-    $resultado2 = $numero1/$numero2;
-    echo "el resultado de la division es: $resultado2";
+    $numero1 = $_POST['numero1'];
+    $numero2 = $_POST['numero2'];
+    $numero3 = $_POST['numero3'];
+    #$resultado1 = $numero1+$numero2;
+    #echo "mi primer numero es: ". $_POST['numero1'] .'<br>';
+    #echo "mi segundo número es: $numero2";
+    
+    #echo "mi primer numero es: ". $_POST['numero1'] .'<br>';
+    #echo "mi segundo número es: $numero2" .'<br>';
+    #echo "el resultado de la suma es: $resultado1" .'<br>';
+    
+    if(isset($_POST['numero3']) && $_POST['numero3']==''){
+        $resultado1 = $numero1+$numero2;
+        echo "mi primer numero es: ". $_POST['numero1'] .'<br>';
+        echo "mi segundo número es: $numero2" .'<br>';
+        echo "el resultado de la suma es: $resultado1" .'<br>';
+        if($numero2==0) {
+            echo "El segundo numero no puede ser 0 para ejecutar la division" ;
+        }else{
+            $resultado2 = $numero1/$numero2;
+            echo "el resultado de la division es: $resultado2";
+        }
+    }else{
+        $resultado3 = $numero1+$numero3;
+        echo "mi primer numero es: ". $_POST['numero1'] .'<br>';
+        echo "mi segundo número es: $numero3" .'<br>';
+        echo "el resultado de la suma es: $resultado3" .'<br>';
+        if($numero3==0) {
+            echo "El segundo numero no puede ser 0 para ejecutar la division" ;
+        }else{
+            $resultado4 = $numero1/$numero3;
+            echo "el resultado de la division es: $resultado4";
+        }
+    }
+    
 }
 
 //Ejercicio 1 haz la suma de los dos numeros aquí ... e imprimelos
